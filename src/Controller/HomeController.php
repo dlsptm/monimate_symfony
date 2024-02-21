@@ -2,15 +2,23 @@
 
 namespace App\Controller;
 
+use App\Service\EmailService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Attribute\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/home', name: 'app_home')]
-    public function index(): Response
+
+    #[Route('/', name: 'app_home')]
+    public function index(Request $request, MailerInterface $mailer): Response
     {
+       
+    
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
         ]);
@@ -27,4 +35,11 @@ class HomeController extends AbstractController
     {
     return $this->render('home/conditions.html.twig');
     }
+
+
+#[Route('/home', name: 'home')]
+ public function home ():Response
+{
+return $this->render('home/home.html.twig');
+}
 }

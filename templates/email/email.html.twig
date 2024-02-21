@@ -1,0 +1,80 @@
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Bienvenue chez Monimate!</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #f3f3f3;
+				font-family: Arial, sans-serif;
+        color: #0B0B0B;
+			}
+
+      .container {
+				width: 580px;
+				margin: 0 50px;
+			}
+
+			h1 {
+				padding: 30px;
+        text-align: center;
+			}
+
+    .text-center {
+      text-align: center;
+    }
+
+      span {
+        font-weight: bold;
+        color: #D54A5A
+      }
+
+			.logo {
+				width: 100%;
+			}
+
+			.btn {
+				display: inline-block;
+				padding: 10px 20px;
+				background: linear-gradient(40deg, #DE7332 0%, #D54A5A 100%);
+				color: #f7f7f7;
+				border-radius: 20px;
+				font-size: 20px;
+				font-weight: bold;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="body">
+			<div class="container">
+
+				<div class="content">
+					<h1>Bonjour
+						<span>{{ user.username }}</span>!</h1>
+					<p>
+						<img src="cid:logo" width="200" alt="">
+						<h2>Bienvenue chez
+							<strong>Monimate</strong>,</h2>
+						{{ content | raw }}
+					</p>
+					<p class="text-center">
+
+							<a href="{{ url(route) }}" class="btn">{{ button }}COUCOU</a>
+
+					</p>
+
+
+				</div>
+				<div class="footer">
+
+					<p>
+						Envoyé par Wanted
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

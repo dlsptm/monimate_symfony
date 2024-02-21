@@ -28,7 +28,7 @@ class EmailService
     ->subject($title)
 
     // path of the Twig template to render
-    ->htmlTemplate('email/index.html.twig')
+    ->htmlTemplate('email/validateAccount.html.twig')
 
     // change locale used in the template, e.g. to match user's locale
     ->locale('fr')

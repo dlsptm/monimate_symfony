@@ -48,7 +48,7 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     private ?array $roles = ['ROLE_USER'];
 
     #[ORM\Column(type: Types::SMALLINT)]
-    private ?int $active = null;
+    private ?int $active = 0;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $token = null;

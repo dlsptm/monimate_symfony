@@ -8,7 +8,7 @@
       <div class="container mt-5 text-center">
         <h1 class="fw-bold">Votre plateforme de gestion de budget</h1>
         <h2 class="my-3 fs-4">Faites de chaque dépense une étape vers une maîtrise financière simplifiée et lucrative !</h2>
-        <a href="#" class="btn orangeRadiant px-4 py-2 text-white fs-5 m-5">Commencer</a>
+        <a href="{{ path('app_login') }}" class="btn orangeRadiant px-4 py-2 text-white fs-5 m-5">Commencer</a>
       </div>
       <img src="{{ asset('img/dashboard.png') }}" alt="" class=" img-round img-fluid w-75">
     </header>
@@ -54,6 +54,10 @@
           <div class="mb-3">
             <label for="email" class="form-label">Adresse email</label>
             <input type="email" class="form-control" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Objet</label>
+            <input type="text" class="form-control" name="subject">
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Message</label>
