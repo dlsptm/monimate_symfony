@@ -26,7 +26,8 @@
 
 			<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-			<button type="submit" class="btn form-submit-btn text-white my-3">Connexion</button>
+			<button type="submit" class="btn form-submit-btn colorWhite my-3">Connexion</button>
 		</button>
 	</form>
+	<p>Pas de compte ? <a href="{{ path('app_register') }}" class="colorBlack">Inscris-toi ici</a></p>
 </div>{% endif %}{% endblock %}

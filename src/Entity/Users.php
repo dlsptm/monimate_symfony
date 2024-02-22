@@ -35,7 +35,6 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     // Email doit être valide
     // value = valeur inséré par l'utilisateur
     #[Assert\Email(message: 'Email {{ value }} est invalide')]
-
     private ?string $email = null;
 
     /**

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategoryController!
+{% endblock %}
+
+{% block body %}
+
+	<h1 class=" text-center m-3">Hello
+		{{ app.user.username }}
+		! ✅</h1>
+
+	<div class="container">
+		{{ form_errors(form) }}
+
+		{{ form_start(form) }}
+		{{ form_row(form.title) }}
+		{{ form_row(form.icon) }}
+		<button type="submit" class="btn form-submit-btn colorWhite my-3">Valider</button>
+		{{ form_end(form) }}
+
+		<div>
+			{% if categories | length > 0 %}
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">id</th>
+							<th scope="col">Icon</th>
+							<th scope="col">Titre</th>
+							<th scope="col">Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for category in categories %}
+							<tr>
+								<th scope="row">{{ category.id}}</th>
+								<td><img src="{{ asset(category.icon) }}" alt="{{ category.title }}" width='50'></td>
+								<td>{{ category.title }}</td>
+								<td>
+									<a href="{{ url('update_category', {'id' : category.id})}}" class="btn orangeRadiant colorWhite">Modifier</a>
+									<a href="{{ url('update_category', {'id' : category.id})}}" class="btn greenRadient colorWhite" onclick="return confirm('Etes vous sur de supprimer ?')">Supprimer</a>
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			{% else %}
+				<p>Aucun category pour l'instant</p>
+			{% endif %}
+		</div>
+
+	</div>
+
+
+{% endblock %}

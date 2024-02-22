@@ -1,7 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Mon Compte!
+{% endblock %}
 
 {% block body %}
+
+<section class="d-flex m-4">
+    <aside class="col-1 d-flex flex-column justify-content-center align-items-center darkerbg py-5 border-radius-20">
+        <p class='text-center fw-bold'>
+            <a href="" class="colorBlack text-decoration-none"></a>
+        </p>
+        <div class="d-flex flex-column justify-content-center align-items-center"></div>
+    </aside>
+    <main class="col-11 notiondisplay">
+        <section class="row d-flex justify-content-around gap-3 m-3 ">
+            <div class="col orangeRadiant border-radius-20 p-4">
+                <p class="m-0 colorOrange">Available balance</p>
+                <p class="fs-3 colorWhite fw-bold">
+                    <span>1249 €</span>
+                </p>
+            </div>
+            <div class="col darkerbg border-radius-20 p-4">
+                <p class="m-0">Income</p>
+                <p class="fs-3 fw-bold">
+                    <span>1249 €</span>
+                </p>
+            </div>
+            <div class="col darkerbg border-radius-20 p-4">
+                <p class="m-0">Spendings</p>
+                <p class="fs-3 fw-bold">
+                    <span>1249 €</span>
+                </p>
+            </div>
+            <div class="col greenRadient border-radius-20 p-4">
+                <p class="m-0 colorGreen">Savings</p>
+                <p class="fs-3 colorWhite fw-bold">
+                    <span>1249 €</span>
+                </p>
+            </div>
+        </section>
+        <section id="categories" class="row darkerbg border-radius-20 m-3 p-3 w-25">
+        <h4 class="my-4 fw-light">Categories</h4>
+        
+        </section>
+    </main>
+</section>
+
+
 
 {% endblock %}
